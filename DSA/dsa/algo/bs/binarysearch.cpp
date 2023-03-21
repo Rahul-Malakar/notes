@@ -9,7 +9,7 @@ int lower_bound(vector<int> &v, int element){
         if(v[mid]<element){
             lo = mid+1;
         }
-        //sdfsdf
+        
         else{
             hi = mid;
         }

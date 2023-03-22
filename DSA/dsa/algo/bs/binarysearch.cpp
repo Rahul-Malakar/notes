@@ -50,7 +50,7 @@ int upper_bound(vector<int> &v, int element){
 int main(){
 
     int n; cin>>n;
-    vector<int> v;
+    vector<int> v; 
     for(int i=0; i<n; i++){
         int b; cin>>b; v.emplace_back(b);
     }

@@ -61,11 +61,56 @@ using namespace std;
 
 // --------------------------------------------
 
-// all the subsequence that add upto a particular value
+// only one of the subsequence that add upto a particular value
 
-void prints(){
-    
-}
+// bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
+//     if(ind==last){
+//         if(csum==sum){
+//             for(auto it:voro){
+//                 cout<<it<<" ";
+//             }
+//             cout<<endl;
+//             return true;
+//         }return false;
+//     }
+//     voro.emplace_back(v[ind]);
+//     csum+=v[ind];
+//     if(prints(ind+1, sum, csum, voro, v, last)){
+//         return true;
+//     }
+//     csum-=v[ind];
+//     voro.pop_back();
+//     if(prints(ind+1, sum, csum, voro, v, last)){
+//         return true;
+//     }
+//     return false;
+
+// }
+
+//if all the subsequences are needed just remove true false stuff and make void function
+
+// -----------------------------------------------------------
+
+// number of subsequences which add upto k
+
+// int prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
+//     if(ind==last){
+//         if(csum==sum){
+            
+//             return 1;
+//         }return 0;
+//     }
+//     voro.emplace_back(v[ind]);
+//     csum+=v[ind];
+//     int l = prints(ind+1, sum, csum, voro, v, last);
+//     csum-=v[ind];
+//     voro.pop_back();
+//     int r= prints(ind+1, sum, csum, voro, v, last);
+//     return l+r;
+
+// }
+
+
 
 int main()
 {
@@ -73,11 +118,7 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> v, voro;
-    for(int i=0; i<n; i++){
-        int b; cin>>b; v.emplace_back(b);
-    }
-    int sum = 3;
+    
     
     return 0;
 }

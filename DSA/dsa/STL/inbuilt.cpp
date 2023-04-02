@@ -18,12 +18,12 @@ int main(){
     int cnt = count(v.begin(), v.end(), 3); //counts occurences of 3 in range
 
     auto indx = find(v.begin(), v.end(), 2); //gives ptr of the element
-    if(indx!=v.end()){
-        cout<<*indx<<endl;
-    }
-    else{
-        cout<<-1<<endl;
-    }
+    // // if(indx!=v.end()){
+    // //     cout<<*indx<<endl;
+    // // }
+    // // else{
+    // //     cout<<-1<<endl;
+    // }
 
     reverse(v.begin(), v.end()); //reverse a vector, array, string
 

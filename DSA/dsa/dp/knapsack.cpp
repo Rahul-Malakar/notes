@@ -60,7 +60,28 @@ int main(){
     // cout<<dp[n-1][weight]<<endl;
 
 // ------------------------------------------------------------------------------------------
+
+
+//-------------------------------further space optimization single array only--------------------------
     
+    // vector<int> prev(weight+1, 0);
+    // for(int i=weights[0]; i<=weight; i++){
+    //     prev[i] = values[0];
+    // }
+
+    // for(int i = 1; i<n-1; i++){
+    //     for(int j=weight; j>= 0; j--){
+    //         int notpick = 0+prev[j];
+    //         int pick = INT_MIN;
+    //         if(weights[i]<=weight){
+    //             pick = values[i] + prev[j - weights[i]];
+    //         }
+    //         prev[j] = max(pick, notpick);
+    //     }
+    // }
+    // cout<< prev[weight];
+
+//-----------------------------------------------------------------------------------
     
 
     return 0;

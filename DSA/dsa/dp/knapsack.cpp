@@ -34,7 +34,8 @@ int main(){
         int a; cin>>a;
         weights.emplace_back(a);
     }
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n; i++){ 
+        
         int b; cin>>b;
         values.emplace_back(b);
     }

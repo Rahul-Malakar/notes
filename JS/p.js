@@ -12,4 +12,3 @@
 // In JavaScript, String values are immutable, which means that they cannot be altered once created.
 
 // Variables which are declared without the let or const keywords are automatically created in the global scope
-

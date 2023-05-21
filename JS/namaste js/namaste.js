@@ -9,7 +9,7 @@
 
 // -------------------------------------- HOISTING -------------------------------
 
-//undefined and not defined are not same things
+//undefined and not defined(this means that a variable was never declared in the program) are not same things
 
 //hoisting - In JavaScript, when the code is being executed, it goes through two phases: the compilation phase and the execution phase. During the compilation phase, the JavaScript engine scans through the code and recognizes variable and function declarations and assigns them memory space. This process is called hoisting.
 // the behavior of variable and function declarations being moved to the top of their containing scope during the compilation phase, before the code is executed.
@@ -30,3 +30,4 @@
 // function expressions (anonymous functions assigned to variables) are not hoisted in the same way as function declarations. Only the variable declaration is hoisted, not the assignment of the function expression.
 
 // ---------------------------------- /HOISTING ----------------------------------------------------
+

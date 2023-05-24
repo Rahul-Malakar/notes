@@ -31,3 +31,23 @@
 
 // ---------------------------------- /HOISTING ----------------------------------------------------
 
+// ------------------------------------- EMPTY JS FILE - WINDOW -------------------------------------------
+
+// even in an empty js file, js engine is still working
+// when we type window we get to see that various functions are being kept ready to be used which is done by js engine
+// we can also use "this" keyword to point window in global context 
+// window is global object which is created along with the global execution context, "this" is also created simultaneously
+
+// ------------------------------------- /EMPTY JS FILE - WINDOW -------------------------------------------
+
+// ------------------------------------- LEXICAL ENVIRONMENT & SCOPE CHAIN -------------------------------------------
+
+// Whenever a execution context is created a lexical envvironment is also created
+
+// lexical means : in hierarchy of in sequence
+
+// lexcical environment is, the local memory along with lexical environment of its parent
+
+// chain of memory blocks of every execution context (towards outer direction) is called SCOPE CHAIN
+
+// ------------------------------------- /LEXICAL ENVIRONMENT & SCOPE CHAIN -------------------------------------------

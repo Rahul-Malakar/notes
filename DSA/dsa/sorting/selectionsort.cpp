@@ -28,10 +28,16 @@ int main()
             arr[i] = temp;
         }
 
+        
+
         // arr[i], arr[min] = arr[min], arr[i] one liner swap
     }
+    for(auto it:arr){
+            cout<<it<<" ";
+        }
+        cout<<endl;
+    return 0;
 
     // “Bidirectional selection sort” that goes through the list of elements by alternating between the smallest and largest element
-
-    return 0;
+    
 }

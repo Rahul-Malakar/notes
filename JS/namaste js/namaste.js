@@ -51,3 +51,25 @@
 // chain of memory blocks of every execution context (towards outer direction) is called SCOPE CHAIN
 
 // ------------------------------------- /LEXICAL ENVIRONMENT & SCOPE CHAIN -------------------------------------------
+
+// ------------------------------------- LET AND CONST & TEMPORAL DEAD ZONE -------------------------------------------
+
+// let and const are hoisted 
+
+// temporal dead zone - the time frame between hoisting and initialization
+// if we try to access a let or const which is in temporal dead zone - error : cannot access before initialization
+
+// ------------------------------------- /LET AND CONST & TEMPORAL DEAD ZONE -------------------------------------------
+
+// ------------------------------------- BLOCK| BLOCK SCOPE | SHADOWING -------------------------------------------
+
+// { } - this is a block also know as compound statement, used to group multiple statements and use it where JS expects single statement
+
+// BLOCK SCOPE - all the vars and functions we can access inside a block
+
+// SHADOWING - when we have same var outside the block, the var inside shadows the outside var, i.e. -  if we access var will be get the value from initialization inside the block
+// in case of var shadowing takes place
+// in case of let and const - no shadowing
+
+// illegal shadowing - cannot shadow a let using var but can shadow a let using let
+// - can shadow a var using let

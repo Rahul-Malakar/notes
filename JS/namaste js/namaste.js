@@ -35,7 +35,7 @@
 
 // even in an empty js file, js engine is still working
 // when we type window we get to see that various functions are being kept ready to be used which is done by js engine
-// we can also use "this" keyword to point window in global context 
+// we can also use "this" keyword to point window in global context
 // window is global object which is created along with the global execution context, "this" is also created simultaneously
 
 // ------------------------------------- /EMPTY JS FILE - WINDOW -------------------------------------------
@@ -54,7 +54,7 @@
 
 // ------------------------------------- LET AND CONST & TEMPORAL DEAD ZONE -------------------------------------------
 
-// let and const are hoisted 
+// let and const are hoisted
 
 // temporal dead zone - the time frame between hoisting and initialization
 // if we try to access a let or const which is in temporal dead zone - error : cannot access before initialization
@@ -73,3 +73,25 @@
 
 // illegal shadowing - cannot shadow a let using var but can shadow a let using let
 // - can shadow a var using let
+
+// ------------------------------------- /BLOCK| BLOCK SCOPE | SHADOWING -------------------------------------------
+
+// ------------------------------------- CLOSURES -------------------------------------------
+
+// closure - a function which is bind with its lexical environment
+// - function along with its lexical scope
+
+// function foo() {
+//   var a = 2;
+//   function bar() {
+//     console.log(a);
+//   }
+//   return bar;
+// }
+// var baz = foo();
+// baz();
+
+// seeeeeeeeeeeeeeee even after foo is gone from memory block, bar still can be called and has access to its lexical scope
+// this reference to the function and its lexical scope is called closure
+
+// ------------------------------------- /CLOSURES -------------------------------------------

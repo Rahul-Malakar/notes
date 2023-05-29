@@ -95,3 +95,72 @@
 // this reference to the function and its lexical scope is called closure
 
 // ------------------------------------- /CLOSURES -------------------------------------------
+
+// ------------------------------------- FIRST CLASS FUNCTIONS | ANONYMOUS FUNCTIONS ------------------------------------
+
+// Function statement or function declaration
+// function a(){
+//     console.log("a");
+// }
+
+// function expression 
+// var b = function(){
+//     console.log("b");
+// }
+
+// major difference between these two is hoisting
+// if we call a before defining the function, we will get an output
+// if we call b beofre defining the function, it will give us an error
+
+// anonymous functions - syntax error
+// function () {
+
+// }
+// anonymous functions are used when the function is used as values 
+
+// named function expression - just naming the function expression
+// var b = function xy(){
+//     console.log("b");
+// }
+// we call be to get output from xy function, but if we call xy then we get an error 
+
+// first class functions
+// the ability to use functions as values is known as first class function 
+
+// ------------------------------------- /FIRST CLASS FUNCTIONS | ANONYMOUS FUNCTIONS ------------------------------------
+
+// ------------------------------------- CALLBACK FUNCTIONS | EVENT LISTENERS ------------------------------------
+
+// the function that we put inside a function call is called callback function. due to this we can do async things in this sync threaded language - JS 
+
+// what are event listeners
+
+// what is garbage collection in event listeners
+
+// ------------------------------------- /CALLBACK FUNCTIONS | EVENT LISTENERS ------------------------------------
+
+// ------------------------------------- ASYNCHRONOUS JS AND EVENT LOOP ------------------------------------
+
+// EVENT LOOP - continuously monitors call stack and callback queue 
+
+// microtask queue - similar to callback queue but has higher priority
+// all the callback functions which comes through promises will go inside microtaskqueue
+// mutation observer keeps on checking if there is some mutation in the dom tree
+
+// except promises and mutation observer, everything else goes into callback queue 
+
+// starvation of callback queue? 
+
+// ------------------------------------- /ASYNCHRONOUS JS AND EVENT LOOP ------------------------------------
+
+// Read about JS Engine, Garbage Collector, Mark and Sweep algo, Inlining, copy elision, inline caching, concurency model.
+
+// ------------------------------------- FUNCTIONAL PROGRAMMING | HIGHER ORDER FUNCTIONS ------------------------------------
+
+// A function that takes function as an argument or returns a function is known as higher order function.
+
+// the function that is passed in a higher order function is a callback function 
+
+// MAP | FILTER | REDUCE
+
+// ------------------------------------- /FUNCTIONAL PROGRAMMING | HIGHER ORDER FUNCTIONS ------------------------------------

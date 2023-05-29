@@ -22,3 +22,8 @@
 // console.log(x);
 
 // ------------ /HOISTING --------------------------------------------
+
+document.getElementById("ClickMe").addEventListener("click", function() {
+    console.log("Button Clicked");
+});
+

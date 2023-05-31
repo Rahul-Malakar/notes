@@ -23,7 +23,7 @@
 
 // ------------ /HOISTING --------------------------------------------
 
-document.getElementById("ClickMe").addEventListener("click", function() {
-    console.log("Button Clicked");
-});
+// document.getElementById("ClickMe").addEventListener("click", function() {
+//     console.log("Button Clicked");
+// });
 

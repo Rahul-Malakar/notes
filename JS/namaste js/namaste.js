@@ -103,7 +103,7 @@
 //     console.log("a");
 // }
 
-// function expression 
+// function expression
 // var b = function(){
 //     console.log("b");
 // }
@@ -116,22 +116,22 @@
 // function () {
 
 // }
-// anonymous functions are used when the function is used as values 
+// anonymous functions are used when the function is used as values
 
 // named function expression - just naming the function expression
 // var b = function xy(){
 //     console.log("b");
 // }
-// we call be to get output from xy function, but if we call xy then we get an error 
+// we call be to get output from xy function, but if we call xy then we get an error
 
 // first class functions
-// the ability to use functions as values is known as first class function 
+// the ability to use functions as values is known as first class function
 
 // ------------------------------------- /FIRST CLASS FUNCTIONS | ANONYMOUS FUNCTIONS ------------------------------------
 
 // ------------------------------------- CALLBACK FUNCTIONS | EVENT LISTENERS ------------------------------------
 
-// the function that we put inside a function call is called callback function. due to this we can do async things in this sync threaded language - JS 
+// the function that we put inside a function call is called callback function. due to this we can do async things in this sync threaded language - JS
 
 // what are event listeners
 
@@ -141,15 +141,15 @@
 
 // ------------------------------------- ASYNCHRONOUS JS AND EVENT LOOP ------------------------------------
 
-// EVENT LOOP - continuously monitors call stack and callback queue 
+// EVENT LOOP - continuously monitors call stack and callback queue
 
 // microtask queue - similar to callback queue but has higher priority
 // all the callback functions which comes through promises will go inside microtaskqueue
 // mutation observer keeps on checking if there is some mutation in the dom tree
 
-// except promises and mutation observer, everything else goes into callback queue 
+// except promises and mutation observer, everything else goes into callback queue
 
-// starvation of callback queue? 
+// starvation of callback queue?
 
 // ------------------------------------- /ASYNCHRONOUS JS AND EVENT LOOP ------------------------------------
 
@@ -159,8 +159,57 @@
 
 // A function that takes function as an argument or returns a function is known as higher order function.
 
-// the function that is passed in a higher order function is a callback function 
+// the function that is passed in a higher order function is a callback function
 
 // MAP | FILTER | REDUCE
 
 // ------------------------------------- /FUNCTIONAL PROGRAMMING | HIGHER ORDER FUNCTIONS ------------------------------------
+
+// ------------------------------------- CALLBACK HELL | INVERSION OF CONTROL ------------------------------------
+
+// CALLBACK HELL is the repeadet callback functions inside functions which are used for dependecy purposes
+
+// const cart = ["shoes", "games", "shirt"];
+
+// api.createOrder(cart, function () {
+//   api.showOrderSummary(function () {
+//     api.proceedToPayment();
+//   });
+// });
+
+// INVERSION OF CONTROL means we lose control of program due to giving control to another program or api
+
+// ------------------------------------- /CALLBACK HELL | INVERSION OF CONTROL ------------------------------------
+
+// ------------------------------------- PROMISES ------------------------------------
+
+// PROMISE - placeholder which will be filled later with a value
+//    - an object representing the eventual completion o failure of an asynchronous operaiton
+
+// const promise = createOrder();
+
+// promise.then(function (orderId) {
+//   showOrderSummary(orderId);
+// });
+
+// PROMISE CHAINING
+
+// createOrder(cart)
+//   .then(function (orderid) {
+//     return showOrderSummary(orderid);
+//   })
+//   .then(function (paymentInfo) {
+//     return proceedToPayment(paymentInfo);
+//   })
+//   .then(function (walletinfo) {
+//     return updateWallet(walletinfo);
+//   });
+
+// // USING ARROW FUNCTION
+// createOrder(cart)
+//   .then((orderid) => showOrderSummary(orderid))
+//   .then((paymentInfo) => proceedToPayment(paymentInfo))
+//   .then((walletinfo) => updateWallet(walletinfo));
+
+
+// ------------------------------------- /PROMISES ------------------------------------

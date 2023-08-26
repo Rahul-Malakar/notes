@@ -1,20 +1,35 @@
-.maincontainer{
-    display: flex;
-    /* align-items: flex-start; */
-
-    /* below is the default alignment; */
-    /* align-items: stretch;  */
-
-    /* flex-direction: column; */
-
-
+@media(min-width:468px){
+    .maincontainer{
+        display: flex;
+        /* align-items: flex-start; */
+    
+        /* below is the default alignment; */
+        /* align-items: stretch;  */
+    
+        /* flex-direction: column; */
+    
+    
+    }
+    
+    .container2{
+        display: flex;
+    
+        /* the below one is default */
+        /* justify-content: flex-start; */
+    
+        justify-content: space-between;
+    }
 }
 
-.container2{
+.container3{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.maincontainer div, .container2 div{
+
+
+.maincontainer div, .container2 div, .container3 div{
     padding: 5px;
     border: 2px solid red;
 }
@@ -33,5 +48,11 @@
 }
 
 .container2boxes{
-    width: 30%;
+    /* width: 27%; */
+    /* the below code is same as above, but better for flexbox kinda stuff */
+    flex-basis: 27%;
+}
+
+.container3boxes{
+    flex-basis: 12%;
 }

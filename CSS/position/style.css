@@ -1,0 +1,28 @@
+.parent{
+    background-color: blue;
+    padding: 5px;
+}
+.childone{
+    background-color: red;
+
+    /* position: relative; */
+    /* relative takes the element out of document flow and the element is treated like a single entity
+    first it appears wherever it should appear statically but if we move it, it would not care about other elements and move independently */
+
+    /* position: absolute; */
+    /* element is completely removed from the document 
+    flow and acts like it doesn't exist at all */
+    /* if parent element has any position other than static, then absolute will treat it for reference */
+
+    /* position: fixed; */
+    /* it is fixed entirely on the html element
+    it has nothing to do with parent */
+
+    position:sticky;
+}
+.childtwo{
+    background-color: green;
+}
+.childthree{
+    background-color: yellow;
+}

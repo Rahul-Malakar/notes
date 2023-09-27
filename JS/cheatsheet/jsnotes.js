@@ -1,8 +1,10 @@
 //refrain from using var
 //use let and const
+// let and const doesn't allow redeclaration in same scope
+// let allows redeclaration in different scope
+// but const doesn't allow
+// let allows reassignment but not const
 
-//strings are immutable in js
-// ------------------------------------------------------------------------------------------------
 // Primitive data types in JavaScript include:
 // Numbers - Integers, floats
 // Strings - Any data under single quote, double quote or backtick quote
@@ -14,50 +16,87 @@
 // Non-primitive data types in JavaScript includes:
 // Objects
 // Arrays
-
-
 // Primitive data types are compared by its values.
 // let numOne = 3
 // let numTwo = 3
-
 // console.log(numOne == numTwo)      // true
-
 // let js = 'JavaScript'
 // let py = 'Python'
-
 // console.log(js == py)             //false 
-
 // let lightOn = true
 // let lightOff = false
-
 // console.log(lightOn == lightOff) // false
-
-
 // Non-primitive data types cannot be compared by value.
 // let nums = [1, 2, 3]
 // let numbers = [1, 2, 3]
-
 // console.log(nums == numbers)  // false
-
 // let userOne = {
 // name:'Asabeneh',
 // role:'teaching',
 // country:'Finland'
 // }
-
 // let userTwo = {
 // name:'Asabeneh',
 // role:'teaching',
 // country:'Finland'
 // }
-
 // console.log(userOne == userTwo) // false
-
 // Rule of thumb, we do not compare non-primitive data types. Do not compare arrays, functions, or objects. Non-primitive values are referred to as reference types, because they are being compared by reference instead of value.
 // let nums = [1, 2, 3]
 // let numbers = nums
-
 // console.log(nums == numbers)  // true
 
-// ------------------------------------------------------------------------------------------------
+// Math object
+// round, floor, ceil, min, max, random, abs, sqrt, pow, log, sin, cos
 
+//strings are immutable in js
+// console.log(`The sum of 2 and 3 is 5`);// statically writing the data
+// let a = 2;
+// let b = 3;
+// let string = `The sum of ${a} and ${b} is ${a + b}`;
+// console.log(string);
+// the variable string only has strings, 2 3 5 in string variable is not number
+
+// string methods
+// length
+// toUpperCase
+// toLowerCase
+// substr(a,b) take b chars from a index
+// substring(a,b) a is starting index, b is ending index (ending index char not included)
+// split(substring) splits the string at a specified place and stores the substrings in an array
+// trim() Removes trailing space in the beginning or the end of a string.
+// includes It takes a substring argument and it checks if substring argument exists in the string. case sensitive
+// replace(a,b) takes a as old substring and b as new substring
+// charCodeAt(index) Takes index and it returns ASCII number of the value at that index
+// indexOf(substring) Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+// search(substring) it takes a substring as an argument and it returns the index of the first match. The search value can be a string or a regular expression pattern.
+// lastIndexOf(substring) Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+// concat(substring, substring, sub..) it takes many substrings and joins them
+// startsWith(substring) it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
+// endsWith(substring) it takes a substring as an argument and it checks if the string ends with that specified substring. It returns a boolean(true or false).
+// match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null.
+// repeat(): it takes a number as argument and it returns the repeated version of the string.
+
+// Casting : Changing data type 
+// String to Int
+// parseInt(stringnum)
+// Number(stringnum)
+// Plus sign(+) newnum += stringnum
+// String to Float
+// parseFloat()
+// Number()
+// Plus sign(+)
+// Float to Int
+// parseInt()
+
+// Window Methods
+// alert('message')
+// prompt('required text', '')
+// const agree = confirm('Are you sure you like to delete? ')
+
+// Date Object
+// const now = new Date()
+// console.log(now)
+// now.functions() 
+
+// Arrays

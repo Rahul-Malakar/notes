@@ -100,3 +100,26 @@
 // now.functions() 
 
 // Arrays
+// Methods to manipulate array
+// const arr = Array(8).fill('X') it creates eight element values filled with 'X'
+// concat
+// const thirdList = firstList.concat(secondList)
+// indexOf
+// lastIndexOf
+// includes return bool 
+// toString:Converts array to string
+// const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+// console.log(names.join()) // Asabeneh,Mathias,Elias,Brook
+// console.log(names.join('')) //AsabenehMathiasEliasBrook
+// console.log(names.join(' ')) //Asabeneh Mathias Elias Brook
+// console.log(names.join(', ')) //Asabeneh, Mathias, Elias, Brook
+// console.log(names.join(' # ')) //Asabeneh # Mathias # Elias # Brook
+// const numbers = [1,2,3,4,5]; console.log(numbers.slice(1,4)) // -> [2,3,4] // it doesn't include the ending position
+// const arr = [1,2,3,4,5,6,7];
+// arr.splice(3, 3, 7, 8, 9, 10); //arr = [1,2,3,7,8,9,10,7]
+// push
+// pop
+// shift - removes one element from beginning
+// unshift - Adding array element in the beginning of the array.
+// reverse 
+// sort 

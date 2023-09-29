@@ -4,6 +4,7 @@
 // let allows redeclaration in different scope
 // but const doesn't allow
 // let allows reassignment but not const
+//"use strict"
 
 // Primitive data types in JavaScript include:
 // Numbers - Integers, floats
@@ -123,3 +124,35 @@
 // unshift - Adding array element in the beginning of the array.
 // reverse 
 // sort 
+
+// Functions
+// Let us access the arguments object
+// function sumAllNums() {
+//   console.log(arguments)
+// }
+// sumAllNums(1, 2, 3, 4) //output : [Arguments] { '0': 1, '1': 2, '2': 3, '3': 4 }
+// in this way we can input unlimited parameters
+
+//arrow function
+// const functionName = (param) => {}
+// Arrow function does not have the function scoped arguments object. To implement a function which takes unlimited number of arguments in an arrow function we use spread operator followed by any parameter name. Any thing we passed as argument in the function can be accessed as array in the arrow function
+// const sumAllNums = (...args) => {
+//   // console.log(arguments), arguments object not found in arrow function
+//   // instead we use a parameter followed by spread operator (...)
+//   console.log(args)
+// }
+// sumAllNums(1, 2, 3, 4)
+// // [1, 2, 3, 4]
+
+//annonymous function
+// const functionName = function(){}
+//call the variable to return a value for output
+// Self invoking functions are anonymous functions which do not need to be called to return a value.
+// (function(n) {
+//   console.log(n * n)
+// })(2) 
+// 4, but instead of just printing if we want to return and store the data, we do as shown below
+// let squaredNum = (function(n) {
+//   return n * n
+// })(10)
+// console.log(squaredNum)

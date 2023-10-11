@@ -51,5 +51,9 @@ let removeduplicate = (arr) => {
   return arr;
 };
 
-removeduplicate(array);
-console.log(array[array.length-2]);
+let returnsecondmax = (arr) => {
+    removeduplicate(arr);
+    console.log(arr[arr.length-2]);
+}
+
+returnsecondmax(array);

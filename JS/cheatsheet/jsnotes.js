@@ -175,6 +175,33 @@
 // Scope
 // A variable declared with var only scoped to function but variable declared with let or const is block scope
 
+// Class
+// constructor function
+// function rectangle(a, b) {
+//   this.length = a;
+//   this.breadth = b;
+//   rectangle.prototype.area = function () {
+//     return this.length * this.breadth;
+//   };
+//   rectangle.prototype.perimeter = function () {
+//     return 2 * (this.length + this.breadth);
+//   };
+// }
+// different type of constructor function
+// class rectangle {
+//   constructor(a, b) {
+//     this.length = a;
+//     this.breadth = b;
+//   }
+//   area() {
+//     return this.length * this.breadth;
+//   }
+//   perimeter = function () {
+//     return 2 * (this.length + this.breadth);
+//   };
+// }
+// the above two methods act in exactly same way 
+
 // Object
 // const rectangle = {
 //   length: 20,

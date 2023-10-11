@@ -53,7 +53,7 @@ let removeduplicate = (arr) => {
 
 let returnsecondmax = (arr) => {
     removeduplicate(arr);
-    console.log(arr[arr.length-2]);
+    return (arr[arr.length-2]);
 }
 
-returnsecondmax(array);
+console.log(returnsecondmax(array));

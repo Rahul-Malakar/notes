@@ -6,6 +6,8 @@
 // let allows reassignment but not const
 //"use strict"
 
+// throw, try, catch, finally
+
 // Primitive data types in JavaScript include:
 // Numbers - Integers, floats
 // Strings - Any data under single quote, double quote or backtick quote
@@ -23,7 +25,7 @@
 // console.log(numOne == numTwo)      // true
 // let js = 'JavaScript'
 // let py = 'Python'
-// console.log(js == py)             //false 
+// console.log(js == py)             //false
 // let lightOn = true
 // let lightOff = false
 // console.log(lightOn == lightOff) // false
@@ -78,7 +80,7 @@
 // match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null.
 // repeat(): it takes a number as argument and it returns the repeated version of the string.
 
-// Casting : Changing data type 
+// Casting : Changing data type
 // String to Int
 // parseInt(stringnum)
 // Number(stringnum)
@@ -98,7 +100,7 @@
 // Date Object
 // const now = new Date()
 // console.log(now)
-// now.functions() 
+// now.functions()
 
 // Arrays
 // Methods to manipulate array
@@ -107,7 +109,7 @@
 // const thirdList = firstList.concat(secondList)
 // indexOf
 // lastIndexOf
-// includes return bool 
+// includes return bool
 // toString:Converts array to string
 // const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 // console.log(names.join()) // Asabeneh,Mathias,Elias,Brook
@@ -122,7 +124,7 @@
 // pop
 // shift - removes one element from beginning
 // unshift - Adding array element in the beginning of the array.
-// reverse 
+// reverse
 // sort
 
 // 2d array
@@ -148,6 +150,9 @@
 // }
 // sumAllNums(1, 2, 3, 4)
 // // [1, 2, 3, 4]
+//arrow functions doesn't hold Arguments object unline other function types
+//arrow functions cannot be used as constructors
+// arrow functions can be used as methods but not recommended as arrow functions doesn't bind with 'this' keyword like other functions
 
 //annonymous function
 // const functionName = function(){}
@@ -162,7 +167,27 @@
 // });
 // console.log(squaredNum(10));
 // OR
-// let squaredNum = (function(n) {
-//     return n * n
-//   })(4);
-//   console.log(squaredNum);
+// let squaredNum = (function (n) {
+//   return n * n;
+// })(4);
+// console.log(squaredNum);
+
+// Scope
+// A variable declared with var only scoped to function but variable declared with let or const is block scope
+
+// Object
+// const rectangle = {
+//   length: 20,
+//   width: 20,
+//   area: function () {
+//     return this.length * this.width;
+//   },
+// };
+// console.log(rectangle.length);
+// console.log(rectangle['length']);
+// console.log(rectangle.area());
+// Object.assign({},nameofobjecttocopy): To copy an object without modifying the original object
+// Object.keys()
+// Object.values()
+// Object.entries()
+// objectname.hasOwnProperty: To check if a specific key or property exist in an object

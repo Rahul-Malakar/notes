@@ -200,7 +200,7 @@
 //     return 2 * (this.length + this.breadth);
 //   };
 // }
-// the above two methods act in exactly same way 
+// the above two methods act in exactly same way
 
 // Object
 // const rectangle = {
@@ -218,3 +218,21 @@
 // Object.values()
 // Object.entries()
 // objectname.hasOwnProperty: To check if a specific key or property exist in an object
+// for in loop
+// for (let key in user) {
+//     // keys
+//     alert( key );  // name, age, isAdmin
+//     // values for the keys
+//     alert( user[key] ); // John, 30, true
+//   }
+
+// Higer order functions
+// callback is a function which can be passed as parameter to other function
+// const square = (n) => {
+//   return n ** 2;
+// };
+// // function that takes other function as a callback
+// function cube(callback, n) {
+//   return callback(n);
+// }
+// console.log(cube(square, 3));

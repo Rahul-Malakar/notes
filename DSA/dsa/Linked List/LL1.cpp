@@ -1,18 +1,24 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct node{
+class node
+{
+public:
     int data;
-    struct node *next;
+    node *next;
+
+    node(int val)
+    {
+        data = val;
+        next = nullptr;
+    }
 };
 
-int main(){
+int main()
+{
 
-    struct node *p;
-    p = new node;
-    p->data=10;
-    p->next=NULL;
-    cout<<p->data<<endl;
+    node *node1 = new node(2);
+    cout << node1->data << endl;
 
     return 0;
 }

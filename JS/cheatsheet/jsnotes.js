@@ -266,3 +266,5 @@
 //     // values for the keys
 //     alert( user[key] ); // John, 30, true
 //   }
+
+// DOM

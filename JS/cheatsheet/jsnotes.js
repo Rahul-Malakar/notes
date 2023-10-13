@@ -10,6 +10,11 @@
 
 // Primitive data types in JavaScript include:
 // Numbers - Integers, floats
+// number.toString(base);  if num =10 then num.toString(2) = 1010
+// if we want to directly convert a number then use two dots : 10..toString(2)
+// let num = 12.34;
+// alert( num.toFixed(1) ); // "12.3" use for position after decimal
+//ways of fixing precision loss : use .toFixed(), multiply and divide by large numbers
 // Strings - Any data under single quote, double quote or backtick quote
 // Booleans - true or false value
 // Null - empty value or no value
@@ -127,6 +132,40 @@
 // reverse
 // sort
 
+// filter
+// let results = arr.filter(function(item, index, array) {
+//     // if true item is pushed to results and the iteration continues
+//     // returns empty array if nothing found
+//   })
+// The find method looks for a single (first) element that makes the function return true.
+// If there may be many, we can use arr.filter(fn).
+// let users = [
+//   { id: 1, name: 'John' },
+//   { id: 2, name: 'Pete' },
+//   { id: 3, name: 'Mary' },
+// ];
+// // returns array of the first two users
+// let someUsers = users.filter((item) => item.id < 3);
+// console.log(someUsers); //[ { id: 1, name: 'John' }, { id: 2, name: 'Pete' } ]
+// map
+// let result = arr.map(function(item, index, array) {
+//     // returns the new value instead of item
+//   });
+// It calls the function for each element of the array and returns the array of results.
+// let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+// alert(lengths); // 5,7,6
+// reduce
+// let value = arr.reduce(function(accumulator, item, index, array) {
+//     // ...
+//   }, [initial]);
+// They are used to calculate a single value based on the array.
+// let value = arr.reduce(function(accumulator, item, index, array) {
+//     // ...
+//   }, [initial]);
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.reduce((sum, current) => sum + current, 0);
+// alert(result); // 15
+
 // 2d array
 // const rows = 3;
 // const columns = 4;
@@ -186,6 +225,7 @@
 //   rectangle.prototype.perimeter = function () {
 //     return 2 * (this.length + this.breadth);
 //   };
+//     // rectangle.prototype.perimeter = () => 2*(this.length+this.breadth);
 // }
 // different type of constructor function
 // class rectangle {
@@ -199,6 +239,7 @@
 //   perimeter = function () {
 //     return 2 * (this.length + this.breadth);
 //   };
+//   perimeter= () => 2*(this.length+this.length);
 // }
 // the above two methods act in exactly same way
 
@@ -225,14 +266,3 @@
 //     // values for the keys
 //     alert( user[key] ); // John, 30, true
 //   }
-
-// Higer order functions
-// callback is a function which can be passed as parameter to other function
-// const square = (n) => {
-//   return n ** 2;
-// };
-// // function that takes other function as a callback
-// function cube(callback, n) {
-//   return callback(n);
-// }
-// console.log(cube(square, 3));

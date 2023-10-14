@@ -36,7 +36,7 @@ let sieve = (k) => {
 let isprime = (inp) => {
   return sieve(inp + 1)[inp] == 1 ? 1 : 0;
 };
-console.log(isprime(12));
+console.log(isprime(13));
 
 //anonymous function
 // let isprime =(function(inp){

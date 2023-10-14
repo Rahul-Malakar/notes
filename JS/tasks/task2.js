@@ -9,22 +9,22 @@
 //   };
 // }
 
-// class rectangle {
-//   constructor(a, b) {
-//     this.length = a;
-//     this.breadth = b;
-//   }
-//   area() {
-//     return this.length * this.breadth;
-//   }
-//   perimeter = function () {
-//     return 2 * (this.length + this.breadth);
-//   };
-// }
+class rectangle {
+  constructor(a, b) {
+    this.length = a;
+    this.breadth = b;
+  }
+  area() {
+    return this.length * this.breadth;
+  }
+  perimeter = function () {
+    return 2 * (this.length + this.breadth);
+  };
+}
 
-// let rect1 = new rectangle(3, 4);
-// console.log(rect1.area());
-// console.log(rect1.perimeter(), '\n');
+let rect1 = new rectangle(3, 4);
+console.log(rect1.area());
+console.log(rect1.perimeter(), '\n');
 
 // let rect2 = new rectangle(6, 4);
 // console.log(rect2.area());

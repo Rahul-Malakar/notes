@@ -17,26 +17,26 @@
 
 // -----------------------------------
 
-// let sieve = (k) => {
-//   let primes = Array(k).fill(1);
+let sieve = (k) => {
+  let primes = Array(k).fill(1);
 
-//   primes[0] = 0;
-//   primes[1] = 0;
-//   for (let i = 2; i*i < k + 1; i++) {
-//     if (primes[i]) {
-//       for (let j = i * i; j < k + 1; j += i) {
-//         primes[j] = 0;
-//       }
-//     }
-//   }
-//   return primes;
-// };
+  primes[0] = 0;
+  primes[1] = 0;
+  for (let i = 2; i*i < k + 1; i++) {
+    if (primes[i]) {
+      for (let j = i * i; j < k + 1; j += i) {
+        primes[j] = 0;
+      }
+    }
+  }
+  return primes;
+};
 
-// //arrow function
-// let isprime = (inp) => {
-//   return sieve(inp + 1)[inp] == 1 ? 1 : 0;
-// };
-// console.log(isprime(12));
+//arrow function
+let isprime = (inp) => {
+  return sieve(inp + 1)[inp] == 1 ? 1 : 0;
+};
+console.log(isprime(12));
 
 //anonymous function
 // let isprime =(function(inp){

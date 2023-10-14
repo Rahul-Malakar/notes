@@ -7,20 +7,20 @@ using namespace std;
 //     if(n==0){
 //         return n;
 //     }
-//     return n + print(n-1);
+//     return n + printsum(n-1);
 // }
 // --------------------------------------------
 // reverse an array
 
-// void rev(int ar[],int start, int end){
+// void rev(int ar[],int start, int end, int size){
 //     if(start>=end/2){
-//         // for(int i=0; i<4; i++){
-//         //     cout<<ar[i]<<endl;
-//         // }
+//         for(int i=0; i<size; i++){
+//             cout<<ar[i]<<endl;
+//         }
 //         return;
 //     }
 //     swap(ar[start],ar[end-1]);
-//     rev(ar, start+1, end-1);
+//     rev(ar, start+1, end-1,size);
 
 // }
 // --------------------------------------------
@@ -63,29 +63,28 @@ using namespace std;
 
 // only one of the subsequence that add upto a particular value
 
-// bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
-//     if(ind==last){
-//         if(csum==sum){
-//             for(auto it:voro){
-//                 cout<<it<<" ";
-//             }
-//             cout<<endl;
-//             return true;
-//         }return false;
-//     }
-//     voro.emplace_back(v[ind]);
-//     csum+=v[ind];
-//     if(prints(ind+1, sum, csum, voro, v, last)){
-//         return true;
-//     }
-//     csum-=v[ind];
-//     voro.pop_back();
-//     if(prints(ind+1, sum, csum, voro, v, last)){
-//         return true;
-//     }
-//     return false;
-
-// }
+bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
+    if(ind==last){
+        if(csum==sum){
+            for(auto it:voro){
+                cout<<it<<" ";
+            } 
+            cout<<endl;
+            return true;
+        }return false;
+    }
+    voro.emplace_back(v[ind]);
+    csum+=v[ind];
+    if(prints(ind+1, sum, csum, voro, v, last)){
+        return true;
+    }
+    csum-=v[ind];
+    voro.pop_back();
+    if(prints(ind+1, sum, csum, voro, v, last)){
+        return true;
+    }
+    return false;
+}
 
 //if all the subsequences are needed just remove true false stuff and make void function
 
@@ -117,7 +116,11 @@ int main()
 
     int n;
     cin >> n;
-
+    vector<int> vres, vec;
+    for(int i=0; i<n; i++){
+        int a; cin>>a; vec.emplace_back(a);
+    }
+    cout<<prints(0, 6, 0, vres, vec, n)<<endl;
     
     
     return 0;

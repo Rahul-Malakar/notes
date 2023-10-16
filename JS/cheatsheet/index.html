@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>30DaysOfScript</title>
+    <title>Document Object Model</title>
   </head>
+
   <body>
-
-    <!-- inline  -->
-    <!-- <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button> -->
-
-    <!-- internal -->
-    <!-- <script>
-        console.log('Welcome to 30DaysOfJavaScript')
-    </script> -->
-
-    <!-- external -->
-    <script src="jsnotes.js"></script>
-    
+    <button>Click Me</button>
+    <script>
+      const button = document.querySelector('button');
+      button.addEventListener('mouseenter', (e) => {
+        console.log(2);
+      });
+    </script>
   </body>
 </html>

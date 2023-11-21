@@ -63,28 +63,28 @@ using namespace std;
 
 // only one of the subsequence that add upto a particular value
 
-bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
-    if(ind==last){
-        if(csum==sum){
-            for(auto it:voro){
-                cout<<it<<" ";
-            } 
-            cout<<endl;
-            return true;
-        }return false;
-    }
-    voro.emplace_back(v[ind]);
-    csum+=v[ind];
-    if(prints(ind+1, sum, csum, voro, v, last)){
-        return true;
-    }
-    csum-=v[ind];
-    voro.pop_back();
-    if(prints(ind+1, sum, csum, voro, v, last)){
-        return true;
-    }
-    return false;
-}
+// bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
+//     if(ind==last){
+//         if(csum==sum){
+//             for(auto it:voro){
+//                 cout<<it<<" ";
+//             } 
+//             cout<<endl;
+//             return true;
+//         }return false;
+//     }
+//     voro.emplace_back(v[ind]);
+//     csum+=v[ind];
+//     if(prints(ind+1, sum, csum, voro, v, last)){
+//         return true;
+//     }
+//     csum-=v[ind];
+//     voro.pop_back();
+//     if(prints(ind+1, sum, csum, voro, v, last)){
+//         return true;
+//     }
+//     return false;
+// }
 
 //if all the subsequences are needed just remove true false stuff and make void function
 
@@ -95,7 +95,6 @@ bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int las
 // int prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int last){
 //     if(ind==last){
 //         if(csum==sum){
-            
 //             return 1;
 //         }return 0;
 //     }
@@ -109,19 +108,26 @@ bool prints(int ind, int sum, int csum, vector<int> voro, vector<int> v, int las
 
 // }
 
+// --------------------------------------------
+
+// decimal to binary 
+
+
+// void d2b(int n, string ans){
+//     if(n==0){
+//         reverse(ans.begin(), ans.end());
+//         cout<<ans<<endl;
+//         return;
+//     }
+//     ans+= to_string(n%2);
+//     d2b(n/2, ans);
+// }
+
 
 
 int main()
 {
-
     int n;
     cin >> n;
-    vector<int> vres, vec;
-    for(int i=0; i<n; i++){
-        int a; cin>>a; vec.emplace_back(a);
-    }
-    cout<<prints(0, 6, 0, vres, vec, n)<<endl;
-    
-    
     return 0;
 }

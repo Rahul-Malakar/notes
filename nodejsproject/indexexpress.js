@@ -1,77 +1,55 @@
+const mongoose = require('mongoose');
 const express = require('express');
-const { MongoClient, ObjectId } = require('mongodb');
+const { ObjectId } = require('mongodb');
 
 const app = express();
-const port = 3000;
-const url = 'mongodb://127.0.0.1:27017/';
-const database = 'bookstore';
-const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(express.json());
+mongoose
+  .connect('mongodb://127.0.0.1:27017/bookstore')
+  .then((result) =>
+    app.listen(3000, () => console.log('Server listening at port 3000'))
+  )
+  .catch((err) => console.log(err));
+const collection1 = mongoose.connection.collection('books');
 
-// GET all books
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.redirect('/get-books');
+});
+
 app.get('/get-books', async (req, res) => {
   try {
-    await client.connect();
-    const db = client.db(database);
-    const collection = db.collection('books');
-    const result = await collection.find({}).toArray();
-    res.json(result);
-  } catch (err) {
-    console.error('Error querying MongoDB:', err);
+    const books = await collection1.find({}).toArray();
+    res.json(books);
+  } catch (error) {
+    console.error('Error retrieving books:', error);
     res.status(500).json({ error: 'Internal Server Error' });
-  } finally {
-    await client.close();
   }
 });
 
-// POST to add a new book
-app.post('/add-book', async (req, res) => {
-  const newData = req.body;
-
-  try {
-    await client.connect();
-    const db = client.db(database);
-    const collection = db.collection('books');
-    const result = await collection.insertOne({title: "Rahul", author: "rahul"});
-
-    if (result.insertedCount === 1) {
-      res.json({ success: true, message: 'Document added successfully.' });
-    } else {
-      res.status(500).json({ success: false, message: 'Failed to add document.' });
-    }
-  } catch (err) {
-    console.error('Error adding document:', err);
-    res.status(500).json({ error: 'Internal Server Error' });
-  } finally {
-    await client.close();
-  }
-});
-
-// DELETE a book by ID
-app.delete('/delete-book/:id', async (req, res) => {
+app.get('/book/:id', async (req, res) => {
   const id = req.params.id;
-
   try {
-    await client.connect();
-    const db = client.db(database);
-    const collection = db.collection('books');
-
-    const result = await collection.deleteOne({ _id: ObjectId(id) });
-
-    if (result.deletedCount === 1) {
-      res.json({ success: true, message: 'Document deleted successfully.' });
-    } else {
-      res.status(404).json({ success: false, message: 'Document not found.' });
-    }
+    const book = await collection1.findOne({ _id: new ObjectId(id) });
+    res.json(book);
   } catch (err) {
-    console.error('Error deleting document:', err);
+    console.log(err);
     res.status(500).json({ error: 'Internal Server Error' });
-  } finally {
-    await client.close();
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+app.get('/find/:name', async (req, res) => {
+  const name = req.params.name;
+  try {
+    const book = await collection1.find({ title: name }).toArray();
+    res.json(book);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.use((req, res) => {
+  res.render('404');
 });
